@@ -3,6 +3,7 @@
 #include <vector>
 #include <ctime>
 #include <cstdlib>
+#include <iomanip>
 using namespace std;
 
 struct Color
@@ -20,17 +21,17 @@ int main()
     for (int i = 0; i < n; i++)
     {
         Color temp;
-        temp.redhue = rand();
-        temp.greenhue = rand();
-        temp.bluehue = rand();
+        temp.redhue = rand()%246;
+        temp.greenhue = rand()%246;
+        temp.bluehue = rand()%246;
         Colors.push_back(temp);
 
     }
-    cout << "Color#" << "R value" << "G value" << "B value" << endl;
-    cout << "-------" << "-------" << "-------" << "-------" << endl;
+    cout << left << setw(8) << "Color#" << setw(8) << "R value" << setw(8) << "G value" << setw(8) << "B value" << endl;
+    cout << left << setw(8) << "-------" << setw(8) << "-------" << setw(8) << "-------" << setw(8) << "-------" << endl;
     for(int i = 0; i < Colors.size(); i++)
     {
-        cout << i + 1 << Colors[i].redhue << Colors[i].greenhue << Colors[i].bluehue << endl;
+        cout  << left << setw(8) << i + 1 << setw(8) << Colors[i].redhue << setw(8) << Colors[i].greenhue << setw(8) << Colors[i].bluehue << endl;
     }
 
 }
