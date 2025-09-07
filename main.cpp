@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <ctime>
+#include <cstdlib>
 using namespace std;
 
 struct Color
@@ -12,19 +14,18 @@ struct Color
 
 int main()
 {
-    int n = rand();
-    vector<Color> Colors (n);
+    srand(time(0));
+    int n = rand() % 26 + 25;
+    vector<Color> Colors;
     for (int i = 0; i < n; i++)
     {
         Color temp;
-        temp.redhue = 
-        temp.greenhue = 
-        temp.bluehue = 
+        temp.redhue = rand();
+        temp.greenhue = rand();
+        temp.bluehue = rand();
         Colors.push_back(temp);
 
     }
-    cout << "Color#    R Value    G Value    B Value" << endl;
-    cout << "------    -------    -------    -------" << endl;
-    cout << n << "    " << redhue << "    " << greenhue << "    " << bluehue << endl;
+    
 
 }
