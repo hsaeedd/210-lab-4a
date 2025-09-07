@@ -26,6 +26,11 @@ int main()
         Colors.push_back(temp);
 
     }
-    
+    cout << "Color#" << "R value" << "G value" << "B value" << endl;
+    cout << "-------" << "-------" << "-------" << "-------" << endl;
+    for(int i = 0; i < Colors.size(); i++)
+    {
+        cout << i + 1 << Colors[i].redhue << Colors[i].greenhue << Colors[i].bluehue << endl;
+    }
 
 }
