@@ -21,6 +21,8 @@ int main()
     for (int i = 0; i < n; i++)
     {
         Color temp;
+        // usually there is a range for the hue values
+        //my results were too big so i set the max to 245 since that's what i saw on the assignment's sample output
         temp.redhue = rand()%246;
         temp.greenhue = rand()%246;
         temp.bluehue = rand()%246;
